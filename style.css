@@ -1,39 +1,42 @@
-body{
+*{
+    margin: 0;
+    padding: 0;
+}
+.fundo{
+    background-image: linear-gradient(45deg,black, rgb(8, 87, 14));
+    height: 100vh;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
-.container{
-    margin: 0 auto;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 400px;
-    padding: 10px;
-    border: 2px solid;
-    box-shadow: 5px 2px 3px;
-    background-color: rgba(43, 41, 41, 0.397);
+.calculadora{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.452);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
 }
-
-.container-son{
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    flex-basis: 60px;
-    gap: .3rem;
+.botao{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(31,31,31);
+    border: none;
+    color: #fff;
 }
-
-
-input{
-    height: 40px;
-    font-size: 20px;
-    box-shadow: 2px 1px 1px;
-    margin-bottom: 20px;
+.botao:hover{
+    background-color: rgba(0, 0, 0, 0.932);
 }
-
-button{
-    flex-grow: 1;
-    border: 2px solid;
-    border-radius: 10%;
-    font-size: 20px;
-    box-shadow: 2px 1px 1px;
+#resultado{
+    background-color: white;
+    width: 207px;
+    height: 30px;
+    margin: 5px;
+    font-size: 25px;
+    color: rgb(19, 12, 12);
+    text-align: right;
+    padding: 5px;
 }
