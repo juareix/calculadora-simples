@@ -1,26 +1,18 @@
-function insert(num){
-    let numero = document.getElementById('resultado').innerHTML;
-    document.getElementById('resultado').innerHTML = numero + num;
-}
-        
-function clean(){
-    document.getElementById('resultado').innerHTML = "";
-}   
+function calcular(tipo, valor){
+    if(tipo === 'acao') {
+      if(valor === 'c'){
+        //limpar o visor
+        document.getElementById('resultado').value = ''
+      }
+      if(valor === '+' || valor === '-' || valor === '*' || valor === '/' || valor === '.'){
+        document.getElementById('resultado').value += valor
+      }
+      if(valor === '=') {
+        var valor_campo = eval(document.getElementById('resultado').value)
+        document.getElementById('resultado').value = valor_campo
+      }
+    } else if (tipo === 'valor') {
 
-
-function back(){
-    let resultado = document.getElementById('resultado').innerHTML;
-    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
-}
-function calcular(){
-    let resultado = document.getElementById('resultado').innerHTML;
-    if(resultado){
-        document.getElementById('resultado').innerHTML = eval(resultado);
+      document.getElementById('resultado').value += valor
     }
-    
-    else{
-        document.getElementById('resultado').innerHTML = "Nada..."
-    }
-    
-}
-        
+  }
